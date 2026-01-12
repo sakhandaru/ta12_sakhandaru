@@ -35,13 +35,15 @@ export default function Slide09_Methodology() {
   ];
 
   return (
-    <div className="w-full h-full bg-zinc-950 text-white p-12 flex flex-col">
+    <div className="w-full h-full bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-white p-12 flex flex-col">
       {/* Header */}
-      <div className="flex items-end justify-between mb-8 border-b border-zinc-800 pb-6">
+      <div className="flex items-end justify-between mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-6">
         <h2 className="text-5xl font-bold uppercase tracking-tight">
           Metode Penelitian
         </h2>
-        <div className="text-6xl font-black text-zinc-800">09.</div>
+        <div className="text-6xl font-black text-zinc-200 dark:text-zinc-800">
+          09.
+        </div>
       </div>
 
       {/* Main Content */}
@@ -49,14 +51,14 @@ export default function Slide09_Methodology() {
         {/* Left: Text Description */}
         <div className="md:col-span-5 flex flex-col justify-center">
           <div className="mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-800 text-blue-400 text-xs font-bold uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider mb-4">
               <RefreshCw size={14} className="animate-spin-slow" />
               Iterative Approach
             </div>
-            <h3 className="text-3xl font-bold text-white mb-4">
+            <h3 className="text-3xl font-bold text-zinc-900 dark:text-white mb-4">
               Extreme Programming (XP)
             </h3>
-            <p className="text-zinc-400 text-lg leading-relaxed">
+            <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">
               Penelitian ini menggunakan metode pengembangan perangkat lunak
               Extreme Programming dengan pendekatan siklus yang cepat dan
               berulang.
@@ -67,11 +69,13 @@ export default function Slide09_Methodology() {
             {steps.map((step, idx) => (
               <div
                 key={idx}
-                className="flex items-start gap-4 p-4 border border-zinc-800/50 rounded-xl hover:bg-zinc-900 transition-colors"
+                className="flex items-start gap-4 p-4 border border-zinc-200 dark:border-zinc-800/50 rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors"
               >
                 <div className="mt-1 opacity-80">{step.icon}</div>
                 <div>
-                  <h4 className="font-bold text-zinc-200">{step.name}</h4>
+                  <h4 className="font-bold text-zinc-900 dark:text-zinc-200">
+                    {step.name}
+                  </h4>
                   <p className="text-sm text-zinc-500">{step.desc}</p>
                 </div>
               </div>
@@ -83,13 +87,13 @@ export default function Slide09_Methodology() {
         <div className="md:col-span-7 relative flex items-center justify-center">
           <div className="relative w-[500px] h-[500px]">
             {/* Connecting Circle/Ring */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none rotate-45">
+            <svg className="absolute inset-0 w-full h-full pointer-events-none rotate-45 text-zinc-200 dark:text-zinc-800">
               <circle
                 cx="50%"
                 cy="50%"
                 r="35%"
                 fill="none"
-                stroke="#27272a"
+                stroke="currentColor"
                 strokeWidth="2"
               />
               {/* Animated Path */}
@@ -109,8 +113,10 @@ export default function Slide09_Methodology() {
 
             {/* Center Label */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-zinc-900 border border-zinc-700 w-32 h-32 rounded-full flex flex-col items-center justify-center z-10 shadow-2xl">
-                <span className="text-4xl font-black text-zinc-800">XP</span>
+              <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 w-32 h-32 rounded-full flex flex-col items-center justify-center z-10 shadow-2xl">
+                <span className="text-4xl font-black text-zinc-200 dark:text-zinc-800">
+                  XP
+                </span>
                 <span className="text-[10px] text-zinc-500 uppercase tracking-widest mt-1">
                   Cycle
                 </span>
@@ -124,7 +130,7 @@ export default function Slide09_Methodology() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2 }}
-                className="w-16 h-16 bg-zinc-900 border-2 border-blue-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-900/20"
+                className="w-16 h-16 bg-white dark:bg-zinc-900 border-2 border-blue-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-900/20"
               >
                 <Search className="text-blue-400" />
               </motion.div>
@@ -136,7 +142,7 @@ export default function Slide09_Methodology() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.4 }}
-                className="w-16 h-16 bg-zinc-900 border-2 border-yellow-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-yellow-900/20"
+                className="w-16 h-16 bg-white dark:bg-zinc-900 border-2 border-yellow-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-yellow-900/20"
               >
                 <PenTool className="text-yellow-400" />
               </motion.div>
@@ -148,7 +154,7 @@ export default function Slide09_Methodology() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.6 }}
-                className="w-16 h-16 bg-zinc-900 border-2 border-green-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-green-900/20"
+                className="w-16 h-16 bg-white dark:bg-zinc-900 border-2 border-green-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-green-900/20"
               >
                 <Code className="text-green-400" />
               </motion.div>
@@ -160,7 +166,7 @@ export default function Slide09_Methodology() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.8 }}
-                className="w-16 h-16 bg-zinc-900 border-2 border-red-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-red-900/20"
+                className="w-16 h-16 bg-white dark:bg-zinc-900 border-2 border-red-500/50 rounded-2xl flex items-center justify-center shadow-lg shadow-red-900/20"
               >
                 <CheckCircle className="text-red-400" />
               </motion.div>

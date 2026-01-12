@@ -4,13 +4,15 @@ import { AlertCircle, Layers, Activity, Settings } from "lucide-react";
 
 export default function Slide02_Background() {
   return (
-    <div className="w-full h-full bg-zinc-950 text-white p-12 flex flex-col">
+    <div className="w-full h-full bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-white p-12 flex flex-col">
       {/* Header */}
-      <div className="flex items-end justify-between mb-8 border-b border-zinc-800 pb-6">
+      <div className="flex items-end justify-between mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-6">
         <h2 className="text-5xl font-bold uppercase tracking-tight">
           Latar Belakang
         </h2>
-        <div className="text-6xl font-black text-zinc-800">02.</div>
+        <div className="text-6xl font-black text-zinc-200 dark:text-zinc-800">
+          02.
+        </div>
       </div>
 
       {/* Grid Content */}
@@ -21,19 +23,19 @@ export default function Slide02_Background() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-zinc-900/50 p-8 rounded-3xl border border-zinc-800 flex-1 flex flex-col justify-center"
+            className="bg-white dark:bg-zinc-900/50 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 flex-1 flex flex-col justify-center"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-2 h-8 bg-blue-500 rounded-full"></div>
-              <h3 className="text-2xl font-bold text-zinc-100">
+              <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">
                 Konteks Sistem TVKU
               </h3>
             </div>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+            <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed mb-6">
               Website TVKU berfungsi sebagai media informasi utama untuk berita,
               program siaran, dan konten institusional.
             </p>
-            <p className="text-zinc-300 text-lg leading-relaxed font-medium">
+            <p className="text-zinc-800 dark:text-zinc-300 text-lg leading-relaxed font-medium">
               Sebagai sistem informasi vital, website ini dituntut memiliki
               kinerja tinggi, struktur terkelola, dan mendukung pengembangan
               jangka panjang.
@@ -45,7 +47,7 @@ export default function Slide02_Background() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-zinc-100 text-black p-6 rounded-3xl flex items-center gap-6"
+            className="bg-zinc-200 dark:bg-zinc-100 text-black p-6 rounded-3xl flex items-center gap-6"
           >
             <AlertCircle size={32} className="text-zinc-900 shrink-0" />
             <p className="text-lg font-bold leading-tight">
@@ -61,7 +63,7 @@ export default function Slide02_Background() {
             <span className="text-xs font-mono uppercase text-zinc-500 tracking-widest">
               Permasalahan Umum
             </span>
-            <div className="h-px w-12 bg-zinc-800"></div>
+            <div className="h-px w-12 bg-zinc-300 dark:bg-zinc-800"></div>
           </div>
 
           {/* Problem Cards */}
@@ -69,13 +71,13 @@ export default function Slide02_Background() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-zinc-900 border border-zinc-800/50 p-6 rounded-2xl flex items-start gap-4 hover:bg-zinc-800/50 transition-colors"
+            className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/50 p-6 rounded-2xl flex items-start gap-4 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors"
           >
-            <div className="p-3 bg-zinc-800 rounded-xl shrink-0">
+            <div className="p-3 bg-zinc-100 dark:bg-zinc-800 rounded-xl shrink-0">
               <Layers size={24} className="text-blue-400" />
             </div>
             <div>
-              <h4 className="text-lg font-bold text-zinc-200 mb-1">
+              <h4 className="text-lg font-bold text-zinc-900 dark:text-zinc-200 mb-1">
                 Struktur Non-Modular
               </h4>
               <p className="text-sm text-zinc-500">
@@ -89,13 +91,13 @@ export default function Slide02_Background() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
-            className="bg-zinc-900 border border-zinc-800/50 p-6 rounded-2xl flex items-start gap-4 hover:bg-zinc-800/50 transition-colors"
+            className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/50 p-6 rounded-2xl flex items-start gap-4 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors"
           >
-            <div className="p-3 bg-zinc-800 rounded-xl shrink-0">
+            <div className="p-3 bg-zinc-100 dark:bg-zinc-800 rounded-xl shrink-0">
               <Activity size={24} className="text-red-400" />
             </div>
             <div>
-              <h4 className="text-lg font-bold text-zinc-200 mb-1">
+              <h4 className="text-lg font-bold text-zinc-900 dark:text-zinc-200 mb-1">
                 Kinerja Belum Optimal
               </h4>
               <p className="text-sm text-zinc-500">
@@ -109,13 +111,13 @@ export default function Slide02_Background() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5 }}
-            className="bg-zinc-900 border border-zinc-800/50 p-6 rounded-2xl flex items-start gap-4 hover:bg-zinc-800/50 transition-colors"
+            className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/50 p-6 rounded-2xl flex items-start gap-4 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors"
           >
-            <div className="p-3 bg-zinc-800 rounded-xl shrink-0">
+            <div className="p-3 bg-zinc-100 dark:bg-zinc-800 rounded-xl shrink-0">
               <Settings size={24} className="text-yellow-400" />
             </div>
             <div>
-              <h4 className="text-lg font-bold text-zinc-200 mb-1">
+              <h4 className="text-lg font-bold text-zinc-900 dark:text-zinc-200 mb-1">
                 Pemeliharaan Tidak Efisien
               </h4>
               <p className="text-sm text-zinc-500">
@@ -126,7 +128,7 @@ export default function Slide02_Background() {
           </motion.div>
 
           {/* Visual Decorator */}
-          <div className="flex-1 bg-linear-to-br from-blue-900/10 to-zinc-900 rounded-2xl border border-zinc-800/30 relative overflow-hidden group">
+          <div className="flex-1 bg-linear-to-br from-blue-100 dark:from-blue-900/10 to-zinc-50 dark:to-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800/30 relative overflow-hidden group">
             <div className="absolute inset-0 flex items-center justify-center opacity-20">
               <div className="w-32 h-32 border border-blue-500/30 rounded-full animate-pulse"></div>
             </div>

@@ -26,13 +26,15 @@ export default function Slide10_Implementation() {
   ];
 
   return (
-    <div className="w-full h-full bg-zinc-950 text-white p-12 flex flex-col">
+    <div className="w-full h-full bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-white p-12 flex flex-col">
       {/* Header */}
-      <div className="flex items-end justify-between mb-6 border-b border-zinc-800 pb-4">
+      <div className="flex items-end justify-between mb-6 border-b border-zinc-200 dark:border-zinc-800 pb-4">
         <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tight">
           Rancangan Implementasi
         </h2>
-        <div className="text-5xl md:text-6xl font-black text-zinc-800">10.</div>
+        <div className="text-5xl md:text-6xl font-black text-zinc-200 dark:text-zinc-800">
+          10.
+        </div>
       </div>
 
       {/* Grid Content */}
@@ -41,14 +43,16 @@ export default function Slide10_Implementation() {
         <div className="md:col-span-4 flex flex-col justify-center gap-6">
           <div>
             <h3 className="text-2xl font-bold mb-3">Strategi Eksekusi</h3>
-            <p className="text-zinc-400 text-base leading-relaxed">
+            <p className="text-zinc-600 dark:text-zinc-400 text-base leading-relaxed">
               Rancangan implementasi disusun secara sistematis untuk memastikan
               proses refaktorisasi berjalan terkontrol.
             </p>
           </div>
 
-          <div className="p-5 bg-zinc-900 border border-zinc-800 rounded-2xl">
-            <h4 className="font-bold text-zinc-200 mb-2">Fokus Tahapan</h4>
+          <div className="p-5 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl">
+            <h4 className="font-bold text-zinc-900 dark:text-zinc-200 mb-2">
+              Fokus Tahapan
+            </h4>
             <ul className="space-y-2">
               {[
                 "Identifikasi modul prioritas",
@@ -69,8 +73,8 @@ export default function Slide10_Implementation() {
         </div>
 
         {/* Right: Compact Flow Diagram using 2 Columns */}
-        <div className="md:col-span-8 bg-zinc-900/50 border border-zinc-800 rounded-3xl p-6 relative flex flex-col items-center justify-center">
-          <div className="absolute inset-0 bg-grid-zinc-800/30 [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
+        <div className="md:col-span-8 bg-zinc-100 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-3xl p-6 relative flex flex-col items-center justify-center">
+          <div className="absolute inset-0 bg-grid-zinc-200/50 dark:bg-grid-zinc-800/30 [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
 
           <h4 className="relative z-10 text-[10px] font-mono uppercase text-zinc-500 tracking-widest mb-4">
             Implementation Workflow
@@ -88,21 +92,24 @@ export default function Slide10_Implementation() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 + idx * 0.1 }}
-                    className="flex items-center gap-3 py-2 px-3 rounded-lg border bg-zinc-800/80 border-zinc-700 w-full"
+                    className="flex items-center gap-3 py-2 px-3 rounded-lg border bg-white dark:bg-zinc-800/80 border-zinc-200 dark:border-zinc-700 w-full"
                   >
-                    <div className="flex items-center justify-center w-6 h-6 bg-zinc-950 rounded text-xs font-mono text-zinc-500 border border-zinc-800 shrink-0">
+                    <div className="flex items-center justify-center w-6 h-6 bg-zinc-100 dark:bg-zinc-950 rounded text-xs font-mono text-zinc-500 border border-zinc-300 dark:border-zinc-800 shrink-0">
                       {step.id}
                     </div>
-                    <div className="p-1.5 bg-zinc-700 rounded text-zinc-400 shrink-0">
+                    <div className="p-1.5 bg-zinc-100 dark:bg-zinc-700 rounded text-zinc-500 dark:text-zinc-400 shrink-0">
                       {step.icon}
                     </div>
-                    <span className="text-sm text-zinc-300 font-medium truncate">
+                    <span className="text-sm text-zinc-600 dark:text-zinc-300 font-medium truncate">
                       {step.name}
                     </span>
                   </motion.div>
                   {/* Down Arrow for internal column flow */}
                   {idx < 3 && (
-                    <ChevronDown size={14} className="text-zinc-600 my-0.5" />
+                    <ChevronDown
+                      size={14}
+                      className="text-zinc-400 dark:text-zinc-600 my-0.5"
+                    />
                   )}
                 </div>
               ))}
@@ -110,7 +117,10 @@ export default function Slide10_Implementation() {
 
             {/* Transition Arrow between Columns */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block">
-              <ArrowRight size={24} className="text-zinc-600 opacity-50" />
+              <ArrowRight
+                size={24}
+                className="text-zinc-400 dark:text-zinc-600 opacity-50"
+              />
             </div>
 
             {/* Column 2: Steps 5-8 */}
@@ -127,14 +137,14 @@ export default function Slide10_Implementation() {
                     className={`flex items-center gap-3 py-2 px-3 rounded-lg border w-full ${
                       step.isFinal
                         ? "bg-blue-900/20 border-blue-500/50"
-                        : "bg-zinc-800/80 border-zinc-700"
+                        : "bg-white dark:bg-zinc-800/80 border-zinc-200 dark:border-zinc-700"
                     }`}
                   >
                     <div
                       className={`flex items-center justify-center w-6 h-6 rounded text-xs font-mono border shrink-0 ${
                         step.isFinal
                           ? "bg-blue-800 text-blue-100 border-blue-500/50"
-                          : "bg-zinc-950 text-zinc-500 border-zinc-800"
+                          : "bg-zinc-100 dark:bg-zinc-950 text-zinc-500 border-zinc-300 dark:border-zinc-800"
                       }`}
                     >
                       {step.id}
@@ -143,14 +153,16 @@ export default function Slide10_Implementation() {
                       className={`p-1.5 rounded shrink-0 ${
                         step.isFinal
                           ? "bg-blue-500 text-white"
-                          : "bg-zinc-700 text-zinc-400"
+                          : "bg-zinc-100 dark:bg-zinc-700 text-zinc-500 dark:text-zinc-400"
                       }`}
                     >
                       {step.icon}
                     </div>
                     <span
                       className={`text-sm font-medium truncate ${
-                        step.isFinal ? "text-blue-200" : "text-zinc-300"
+                        step.isFinal
+                          ? "text-blue-200"
+                          : "text-zinc-600 dark:text-zinc-300"
                       }`}
                     >
                       {step.name}
@@ -158,7 +170,10 @@ export default function Slide10_Implementation() {
                   </motion.div>
                   {/* Down Arrow for internal column flow */}
                   {idx < 3 && (
-                    <ChevronDown size={14} className="text-zinc-600 my-0.5" />
+                    <ChevronDown
+                      size={14}
+                      className="text-zinc-400 dark:text-zinc-600 my-0.5"
+                    />
                   )}
                 </div>
               ))}

@@ -10,13 +10,15 @@ export default function Slide06_Benefits() {
   ];
 
   return (
-    <div className="w-full h-full bg-zinc-950 text-white p-12 flex flex-col">
+    <div className="w-full h-full bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-white p-12 flex flex-col">
       {/* Header */}
-      <div className="flex items-end justify-between mb-8 border-b border-zinc-800 pb-6">
+      <div className="flex items-end justify-between mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-6">
         <h2 className="text-5xl font-bold uppercase tracking-tight">
           Manfaat Penelitian
         </h2>
-        <div className="text-6xl font-black text-zinc-800">06.</div>
+        <div className="text-6xl font-black text-zinc-200 dark:text-zinc-800">
+          06.
+        </div>
       </div>
 
       {/* Content Grid */}
@@ -25,18 +27,18 @@ export default function Slide06_Benefits() {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
-          className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 flex flex-col"
+          className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl p-8 flex flex-col"
         >
-          <div className="w-14 h-14 bg-zinc-800 rounded-2xl flex items-center justify-center mb-6 text-zinc-400">
+          <div className="w-14 h-14 bg-zinc-100 dark:bg-zinc-800 rounded-2xl flex items-center justify-center mb-6 text-zinc-500 dark:text-zinc-400">
             <BookOpen size={32} />
           </div>
-          <h3 className="text-3xl font-bold mb-6 text-zinc-100">
+          <h3 className="text-3xl font-bold mb-6 text-zinc-900 dark:text-zinc-100">
             Manfaat Teoretis
           </h3>
-          <p className="text-xl text-zinc-400 leading-relaxed">
+          <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed">
             Memberikan kontribusi keilmuan di bidang sistem informasi, khususnya
             terkait penerapan{" "}
-            <span className="text-white font-semibold">
+            <span className="text-zinc-900 dark:text-white font-semibold">
               Modernisasi Arsitektur Web
             </span>{" "}
             untuk meningkatkan kualitas arsitektur sistem.
@@ -44,8 +46,8 @@ export default function Slide06_Benefits() {
 
           {/* Decor */}
           <div className="mt-auto pt-12">
-            <div className="h-2 w-24 bg-zinc-800 rounded-full">
-              <div className="h-full w-1/3 bg-white rounded-full"></div>
+            <div className="h-2 w-24 bg-zinc-200 dark:bg-zinc-800 rounded-full">
+              <div className="h-full w-1/3 bg-zinc-900 dark:bg-white rounded-full"></div>
             </div>
           </div>
         </motion.div>
@@ -55,9 +57,9 @@ export default function Slide06_Benefits() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-zinc-100 text-zinc-900 rounded-3xl p-8 flex flex-col"
+          className="bg-zinc-900 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-900 rounded-3xl p-8 flex flex-col"
         >
-          <div className="w-14 h-14 bg-zinc-200 rounded-2xl flex items-center justify-center mb-6 text-zinc-900">
+          <div className="w-14 h-14 bg-zinc-800 dark:bg-zinc-200 rounded-2xl flex items-center justify-center mb-6 text-zinc-100 dark:text-zinc-900">
             <Briefcase size={32} />
           </div>
           <h3 className="text-3xl font-bold mb-8">Manfaat Praktis</h3>
@@ -82,7 +84,7 @@ export default function Slide06_Benefits() {
 
           {/* Decor */}
           <div className="mt-auto pt-12 flex justify-end">
-            <div className="px-4 py-2 bg-white rounded-full text-xs font-bold uppercase tracking-widest border border-zinc-200">
+            <div className="px-4 py-2 bg-zinc-800 dark:bg-white rounded-full text-xs font-bold uppercase tracking-widest border border-zinc-700 dark:border-zinc-200">
               TVKU Case Study
             </div>
           </div>

@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function Slide01_Cover() {
   return (
-    <div className="w-full h-full bg-zinc-950 text-white p-12 flex flex-col justify-between">
+    <div className="w-full h-full bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-white p-12 flex flex-col justify-between">
       {/* Top Bar */}
-      <div className="flex justify-between items-start border-b border-zinc-800 pb-6">
+      <div className="flex justify-between items-start border-b border-zinc-200 dark:border-zinc-800 pb-6">
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-4">
             {/* Logo Placeholder - Adjust size as needed */}
@@ -28,7 +28,7 @@ export default function Slide01_Cover() {
               />
             </div>
           </div>
-          <div className="h-8 w-[1px] bg-zinc-800"></div>
+          <div className="h-8 w-[1px] bg-zinc-200 dark:bg-zinc-800"></div>
           <span className="text-sm font-mono tracking-widest uppercase text-zinc-500">
             Sidang Akhir Skripsi
           </span>
@@ -50,11 +50,15 @@ export default function Slide01_Cover() {
           >
             Penerapan Refaktorisasi
             <br />
-            <span className="text-zinc-600">Berbasis Komponen Modular</span>
+            <span className="text-zinc-400 dark:text-zinc-600">
+              Berbasis Komponen Modular
+            </span>
             <br />
             Untuk Meningkatkan Kinerja
             <br />
-            <span className="text-zinc-600">Dan Kualitas Arsitektur</span>
+            <span className="text-zinc-400 dark:text-zinc-600">
+              Dan Kualitas Arsitektur
+            </span>
             <br />
             Pada Aplikasi Web TVKU
           </motion.h1>
@@ -65,13 +69,13 @@ export default function Slide01_Cover() {
             transition={{ delay: 0.4 }}
             className="flex flex-wrap gap-3 pt-4"
           >
-            <div className="px-4 py-1.5 border border-zinc-700 rounded-full text-zinc-400 text-xs hover:bg-zinc-800 transition-colors">
+            <div className="px-4 py-1.5 border border-zinc-300 dark:border-zinc-700 rounded-full text-zinc-500 dark:text-zinc-400 text-xs hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
               Web Performance
             </div>
-            <div className="px-4 py-1.5 border border-zinc-700 rounded-full text-zinc-400 text-xs hover:bg-zinc-800 transition-colors">
+            <div className="px-4 py-1.5 border border-zinc-300 dark:border-zinc-700 rounded-full text-zinc-500 dark:text-zinc-400 text-xs hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
               Modular Architecture
             </div>
-            <div className="px-4 py-1.5 border border-zinc-700 rounded-full text-zinc-400 text-xs hover:bg-zinc-800 transition-colors">
+            <div className="px-4 py-1.5 border border-zinc-300 dark:border-zinc-700 rounded-full text-zinc-500 dark:text-zinc-400 text-xs hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
               Code Refactoring
             </div>
           </motion.div>
@@ -84,23 +88,25 @@ export default function Slide01_Cover() {
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl"
+            className="bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-6 rounded-2xl"
           >
             <div className="flex justify-between items-start mb-6">
               <div className="w-10 h-10 bg-blue-900/20 text-blue-400 rounded-full flex items-center justify-center border border-blue-900/50">
                 <span className="font-bold text-sm">RS</span>
               </div>
-              <ArrowUpRight className="text-zinc-600 w-5 h-5" />
+              <ArrowUpRight className="text-zinc-400 dark:text-zinc-600 w-5 h-5" />
             </div>
 
             <div className="space-y-1">
               <p className="text-zinc-500 text-[10px] uppercase tracking-wider">
                 Mahasiswa
               </p>
-              <p className="text-lg font-bold text-white">
+              <p className="text-lg font-bold text-zinc-900 dark:text-white">
                 Rifqis Sakha Hilmi Aziz
               </p>
-              <p className="text-sm text-zinc-400 font-mono">A11.2022.14254</p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 font-mono">
+                A11.2022.14254
+              </p>
             </div>
           </motion.div>
 
@@ -111,19 +117,19 @@ export default function Slide01_Cover() {
             transition={{ delay: 0.6 }}
             className="grid grid-cols-1 gap-4"
           >
-            <div className="border border-zinc-800/50 p-4 rounded-xl bg-zinc-900/30">
+            <div className="border border-zinc-200 dark:border-zinc-800/50 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/30">
               <p className="text-zinc-500 text-[10px] uppercase tracking-wider mb-1">
                 Pembimbing
               </p>
-              <p className="text-sm font-semibold text-zinc-200">
+              <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-200">
                 GUSTINA ALFA TRISNAPRADIKA, M.Kom
               </p>
             </div>
-            <div className="border border-zinc-800/50 p-4 rounded-xl bg-zinc-900/30">
+            <div className="border border-zinc-200 dark:border-zinc-800/50 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/30">
               <p className="text-zinc-500 text-[10px] uppercase tracking-wider mb-1">
                 Penguji
               </p>
-              <p className="text-sm font-semibold text-zinc-200">
+              <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-200">
                 NOVITA KURNIA NINGRUM, M. Kom
               </p>
             </div>
@@ -132,20 +138,20 @@ export default function Slide01_Cover() {
       </div>
 
       {/* Footer */}
-      <div className="flex justify-between items-end border-t border-zinc-800 pt-6">
-        <div className="text-7xl font-bold text-zinc-900 leading-none select-none -mb-3">
+      <div className="flex justify-between items-end border-t border-zinc-200 dark:border-zinc-800 pt-6">
+        <div className="text-7xl font-bold text-zinc-200 dark:text-zinc-900 leading-none select-none -mb-3">
           01
         </div>
         <div className="flex flex-col items-end gap-1">
-          <div className="h-1 w-24 bg-zinc-800 rounded-full overflow-hidden">
+          <div className="h-1 w-24 bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: "100%" }}
               transition={{ duration: 1.5, delay: 0.5 }}
-              className="h-full bg-white"
+              className="h-full bg-zinc-900 dark:bg-white"
             />
           </div>
-          <p className="text-[10px] text-zinc-600 uppercase tracking-widest mt-2">
+          <p className="text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mt-2">
             Dian Nuswantoro University
           </p>
         </div>

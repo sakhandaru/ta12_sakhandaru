@@ -28,13 +28,15 @@ export default function Slide05_Objectives() {
   ];
 
   return (
-    <div className="w-full h-full bg-zinc-950 text-white p-12 flex flex-col">
+    <div className="w-full h-full bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-white p-12 flex flex-col">
       {/* Header */}
-      <div className="flex items-end justify-between mb-12 border-b border-zinc-800 pb-6">
+      <div className="flex items-end justify-between mb-12 border-b border-zinc-200 dark:border-zinc-800 pb-6">
         <h2 className="text-5xl font-bold uppercase tracking-tight">
           Tujuan Penelitian
         </h2>
-        <div className="text-6xl font-black text-zinc-800">05.</div>
+        <div className="text-6xl font-black text-zinc-200 dark:text-zinc-800">
+          05.
+        </div>
       </div>
 
       {/* Content */}
@@ -53,7 +55,7 @@ export default function Slide05_Objectives() {
                 className={`absolute inset-0 ${obj.color} blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-3xl`}
               ></div>
 
-              <div className="relative h-full bg-zinc-900 border border-zinc-800 p-8 rounded-3xl flex flex-col hover:translate-y-[-5px] transition-transform duration-300">
+              <div className="relative h-full bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-8 rounded-3xl flex flex-col hover:translate-y-[-5px] transition-transform duration-300">
                 {/* Icon Header */}
                 <div className="flex justify-between items-start mb-6">
                   <div
@@ -61,19 +63,19 @@ export default function Slide05_Objectives() {
                   >
                     {obj.icon}
                   </div>
-                  <div className="text-zinc-700 font-bold text-4xl opacity-50">
+                  <div className="text-zinc-200 dark:text-zinc-700 font-bold text-4xl opacity-50">
                     0{obj.id}
                   </div>
                 </div>
 
                 {/* Text Content */}
                 <h3 className="text-2xl font-bold mb-4">{obj.title}</h3>
-                <p className="text-zinc-400 leading-relaxed text-lg">
+                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-lg">
                   {obj.desc}
                 </p>
 
                 {/* Bottom Indication */}
-                <div className="mt-auto pt-8 flex items-center gap-2 text-zinc-500 group-hover:text-white transition-colors">
+                <div className="mt-auto pt-8 flex items-center gap-2 text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
                   <CheckCircle2 size={16} />
                   <span className="text-xs uppercase tracking-widest font-semibold">
                     Tercapai

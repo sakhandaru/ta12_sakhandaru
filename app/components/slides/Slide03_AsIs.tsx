@@ -4,13 +4,15 @@ import { LayoutGrid, AlertTriangle, GitCommit } from "lucide-react";
 
 export default function Slide03_AsIs() {
   return (
-    <div className="w-full h-full bg-zinc-950 text-white p-12 flex flex-col">
+    <div className="w-full h-full bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-white p-12 flex flex-col">
       {/* Header */}
-      <div className="flex items-end justify-between mb-8 border-b border-zinc-800 pb-6">
+      <div className="flex items-end justify-between mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-6">
         <h2 className="text-5xl font-bold uppercase tracking-tight">
           Kondisi Sistem (As-Is)
         </h2>
-        <div className="text-6xl font-black text-zinc-800">03.</div>
+        <div className="text-6xl font-black text-zinc-200 dark:text-zinc-800">
+          03.
+        </div>
       </div>
 
       {/* Grid Content */}
@@ -18,7 +20,7 @@ export default function Slide03_AsIs() {
         {/* Main Content (Left) */}
         <div className="md:col-span-6 flex flex-col gap-6">
           <div className="prose prose-invert max-w-none">
-            <p className="text-xl text-zinc-300 leading-relaxed">
+            <p className="text-xl text-zinc-700 dark:text-zinc-300 leading-relaxed">
               Berdasarkan hasil observasi, website TVKU telah berfungsi sebagai
               media informasi, namun memiliki keterbatasan mendasar pada
               struktur dan kinerja.
@@ -31,13 +33,16 @@ export default function Slide03_AsIs() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-              className="flex items-start gap-4 p-4 rounded-xl bg-zinc-900 border border-zinc-800"
+              className="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800"
             >
-              <div className="p-2 bg-zinc-800 rounded-lg">
-                <LayoutGrid size={20} className="text-zinc-400" />
+              <div className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-lg">
+                <LayoutGrid
+                  size={20}
+                  className="text-zinc-500 dark:text-zinc-400"
+                />
               </div>
               <div>
-                <h4 className="font-bold text-zinc-200">
+                <h4 className="font-bold text-zinc-900 dark:text-zinc-200">
                   Struktur Tidak Terstandarisasi
                 </h4>
                 <p className="text-sm text-zinc-500">
@@ -51,13 +56,18 @@ export default function Slide03_AsIs() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
-              className="flex items-start gap-4 p-4 rounded-xl bg-zinc-900 border border-zinc-800"
+              className="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800"
             >
-              <div className="p-2 bg-zinc-800 rounded-lg">
-                <AlertTriangle size={20} className="text-zinc-400" />
+              <div className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-lg">
+                <AlertTriangle
+                  size={20}
+                  className="text-zinc-500 dark:text-zinc-400"
+                />
               </div>
               <div>
-                <h4 className="font-bold text-zinc-200">Kinerja Bervariasi</h4>
+                <h4 className="font-bold text-zinc-900 dark:text-zinc-200">
+                  Kinerja Bervariasi
+                </h4>
                 <p className="text-sm text-zinc-500">
                   Performansi menurun seiring bertambahnya kompleksitas
                   tampilan.
@@ -69,13 +79,16 @@ export default function Slide03_AsIs() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
-              className="flex items-start gap-4 p-4 rounded-xl bg-zinc-900 border border-zinc-800"
+              className="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800"
             >
-              <div className="p-2 bg-zinc-800 rounded-lg">
-                <GitCommit size={20} className="text-zinc-400" />
+              <div className="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-lg">
+                <GitCommit
+                  size={20}
+                  className="text-zinc-500 dark:text-zinc-400"
+                />
               </div>
               <div>
-                <h4 className="font-bold text-zinc-200">
+                <h4 className="font-bold text-zinc-900 dark:text-zinc-200">
                   Ketergantungan Tinggi
                 </h4>
                 <p className="text-sm text-zinc-500">
@@ -95,8 +108,8 @@ export default function Slide03_AsIs() {
         </div>
 
         {/* Visual Area (Right) - "Random Boxes" Illustration */}
-        <div className="md:col-span-6 bg-zinc-900/50 rounded-3xl border border-zinc-800 overflow-hidden relative flex items-center justify-center">
-          <div className="absolute inset-0 bg-grid-zinc-800/50 [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
+        <div className="md:col-span-6 bg-zinc-100 dark:bg-zinc-900/50 rounded-3xl border border-zinc-200 dark:border-zinc-800 overflow-hidden relative flex items-center justify-center">
+          <div className="absolute inset-0 bg-grid-zinc-200/50 dark:bg-grid-zinc-800/50 [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
 
           {/* The "Messy" Structure Visualization */}
           <div className="relative w-full h-full p-8">
@@ -104,7 +117,7 @@ export default function Slide03_AsIs() {
               <div className="relative w-80 h-80">
                 {/* Connecting Lines (Messy Dependencies) */}
                 <svg
-                  className="absolute inset-0 w-full h-full text-zinc-700 pointer-events-none"
+                  className="absolute inset-0 w-full h-full text-zinc-300 dark:text-zinc-700 pointer-events-none"
                   style={{ strokeWidth: 1 }}
                 >
                   <motion.path
@@ -152,9 +165,9 @@ export default function Slide03_AsIs() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.5, type: "spring" }}
-                  className="absolute top-0 left-0 w-24 h-24 bg-zinc-800 border-2 border-zinc-600 rounded-lg flex items-center justify-center z-10"
+                  className="absolute top-0 left-0 w-24 h-24 bg-white dark:bg-zinc-800 border-2 border-zinc-300 dark:border-zinc-600 rounded-lg flex items-center justify-center z-10"
                 >
-                  <span className="text-xs text-zinc-400 font-mono">
+                  <span className="text-xs text-zinc-500 dark:text-zinc-400 font-mono">
                     Module A
                   </span>
                 </motion.div>
@@ -163,9 +176,9 @@ export default function Slide03_AsIs() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.6, type: "spring" }}
-                  className="absolute top-10 right-10 w-32 h-20 bg-zinc-800 border-2 border-zinc-600 rounded-lg flex items-center justify-center z-20 shadow-xl"
+                  className="absolute top-10 right-10 w-32 h-20 bg-white dark:bg-zinc-800 border-2 border-zinc-300 dark:border-zinc-600 rounded-lg flex items-center justify-center z-20 shadow-xl"
                 >
-                  <span className="text-xs text-zinc-400 font-mono">
+                  <span className="text-xs text-zinc-500 dark:text-zinc-400 font-mono">
                     Component B
                   </span>
                 </motion.div>
@@ -174,9 +187,9 @@ export default function Slide03_AsIs() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.7, type: "spring" }}
-                  className="absolute bottom-10 left-10 w-28 h-28 bg-zinc-800 border-2 border-zinc-600 rounded-lg flex items-center justify-center z-10"
+                  className="absolute bottom-10 left-10 w-28 h-28 bg-white dark:bg-zinc-800 border-2 border-zinc-300 dark:border-zinc-600 rounded-lg flex items-center justify-center z-10"
                 >
-                  <span className="text-xs text-zinc-400 font-mono">
+                  <span className="text-xs text-zinc-500 dark:text-zinc-400 font-mono">
                     Logic C
                   </span>
                 </motion.div>
@@ -185,9 +198,9 @@ export default function Slide03_AsIs() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.8, type: "spring" }}
-                  className="absolute bottom-20 right-0 w-24 h-24 bg-zinc-800 border-2 border-zinc-600 rounded-lg flex items-center justify-center z-30 shadow-2xl"
+                  className="absolute bottom-20 right-0 w-24 h-24 bg-white dark:bg-zinc-800 border-2 border-zinc-300 dark:border-zinc-600 rounded-lg flex items-center justify-center z-30 shadow-2xl"
                 >
-                  <span className="text-xs text-zinc-400 font-mono">
+                  <span className="text-xs text-zinc-500 dark:text-zinc-400 font-mono">
                     Style D
                   </span>
                 </motion.div>
@@ -205,7 +218,7 @@ export default function Slide03_AsIs() {
               <p className="text-xs text-zinc-500 uppercase tracking-widest mb-1">
                 Visual Insight
               </p>
-              <p className="text-sm text-zinc-400 font-medium">
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">
                 Ilustrasi Struktur Acak &<br />
                 Non-Modular
               </p>
