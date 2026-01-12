@@ -48,7 +48,7 @@ export default function Slide11_Backcover() {
           className="max-w-2xl"
         >
           <p className="text-2xl text-zinc-400 leading-relaxed">
-            "Atas perhatian Bapak/Ibu Penguji, saya ucapkan terima kasih."
+            "Atas perhatian Ibu Novita Kurnia Ningrum, M. Kom selaku Penguji, saya ucapkan terima kasih."
           </p>
         </motion.div>
 
