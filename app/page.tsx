@@ -125,8 +125,8 @@ export default function SlideDeck() {
         )}
       </AnimatePresence>
 
-      {/* Navigation Controls */}
-      <div className="absolute inset-x-0 bottom-0 h-20 flex items-center justify-between px-8 z-40 group pointer-events-none">
+      {/* Navigation Controls (Visible on mobile/tap, hover on desktop) */}
+      <div className="absolute inset-x-0 bottom-0 h-20 flex items-center justify-between px-4 md:px-8 opacity-100 md:opacity-0 md:hover:opacity-100 transition-opacity duration-300 z-50">
         {/* Left/Right Buttons - Pointer events only on buttons */}
         <button
           onClick={prevSlide}

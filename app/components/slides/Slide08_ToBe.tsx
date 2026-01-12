@@ -64,7 +64,7 @@ export default function Slide08_ToBe() {
 
         {/* Right Panel: Visual Comparison */}
         <div className="md:col-span-7 bg-zinc-900 rounded-3xl border border-zinc-800 p-8 flex flex-col relative overflow-hidden">
-          <div className="absolute inset-0 bg-grid-zinc-800/30 [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-zinc-950 to-transparent z-10 mask-[linear-gradient(to_bottom,transparent,black)]"></div>
 
           {/* Header Label for Visual */}
           <div className="flex justify-between items-center mb-8 relative z-10">

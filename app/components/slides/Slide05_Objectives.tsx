@@ -28,18 +28,18 @@ export default function Slide05_Objectives() {
   ];
 
   return (
-    <div className="w-full h-full bg-zinc-950 text-white p-12 flex flex-col">
+    <div className="w-full h-full bg-zinc-950 text-white p-6 md:p-12 flex flex-col">
       {/* Header */}
-      <div className="flex items-end justify-between mb-12 border-b border-zinc-800 pb-6">
-        <h2 className="text-5xl font-bold uppercase tracking-tight">
-          Tujuan Penelitian
+      <div className="flex items-end justify-between mb-6 md:mb-8 border-b border-zinc-800 pb-4 md:pb-6">
+        <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tight">
+          Manfaat Penelitian
         </h2>
-        <div className="text-6xl font-black text-zinc-800">05.</div>
+        <div className="text-4xl md:text-6xl font-black text-zinc-800">06.</div>
       </div>
 
-      {/* Content */}
-      <div className="flex-1 flex flex-col justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Content Grid */}
+      <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 overflow-y-auto md:overflow-hidden pb-4 md:pb-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 pb-4 md:pb-0">
           {objectives.map((obj, index) => (
             <motion.div
               key={obj.id}
