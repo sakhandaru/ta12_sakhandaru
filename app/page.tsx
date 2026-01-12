@@ -16,17 +16,17 @@ import Slide10_Implementation from "./components/slides/Slide10_Implementation";
 import Slide11_Backcover from "./components/slides/Slide11_Backcover";
 
 const SLIDES = [
-  Slide01_Cover,
-  Slide02_Background,
-  Slide03_AsIs,
-  Slide04_Problem,
-  Slide05_Objectives,
-  Slide06_Benefits,
-  Slide07_Scope,
-  Slide08_ToBe,
-  Slide09_Methodology,
-  Slide10_Implementation,
-  Slide11_Backcover,
+  { component: Slide01_Cover, title: "COVER" },
+  { component: Slide02_Background, title: "BACKGROUND" },
+  { component: Slide03_AsIs, title: "AS-IS" },
+  { component: Slide04_Problem, title: "PROBLEM" },
+  { component: Slide05_Objectives, title: "OBJECTIVES" },
+  { component: Slide06_Benefits, title: "BENEFITS" },
+  { component: Slide07_Scope, title: "SCOPE" },
+  { component: Slide08_ToBe, title: "TO-BE" },
+  { component: Slide09_Methodology, title: "METHODOLOGY" },
+  { component: Slide10_Implementation, title: "IMPLEMENTATION" },
+  { component: Slide11_Backcover, title: "BACKCOVER" },
 ];
 
 export default function SlideDeck() {
@@ -61,7 +61,7 @@ export default function SlideDeck() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [nextSlide, prevSlide, showGrid]);
 
-  const CurrentSlideComponent = SLIDES[currentSlide];
+  const CurrentSlideComponent = SLIDES[currentSlide].component;
 
   return (
     <main className="relative w-screen h-screen bg-zinc-950 overflow-hidden text-white">
@@ -90,7 +90,7 @@ export default function SlideDeck() {
             onClick={() => setShowGrid(false)}
           >
             <div className="grid grid-cols-4 md:grid-cols-6 gap-4 w-full max-w-6xl">
-              {SLIDES.map((SlideComp, index) => (
+              {SLIDES.map((slide, index) => (
                 <button
                   key={index}
                   onClick={(e) => {
@@ -107,9 +107,9 @@ export default function SlideDeck() {
                   <div className="absolute top-2 left-2 text-xs font-mono opacity-50">
                     {index + 1}
                   </div>
-                  {/* Mini Preview Placeholder (Using Slide Name or Content) */}
-                  <div className="text-[10px] uppercase tracking-widest text-center px-2 opacity-70">
-                    {SlideComp.name.replace("Slide", "").replace(/_/g, " ")}
+                  {/* Explicit Title Display */}
+                  <div className="text-[10px] uppercase tracking-widest text-center px-2 opacity-70 font-semibold">
+                    {slide.title}
                   </div>
                 </button>
               ))}
