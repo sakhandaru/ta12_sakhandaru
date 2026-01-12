@@ -15,7 +15,7 @@ export default function Slide04_Problem() {
       id: 2,
       icon: <Box className="text-blue-400" size={24} />,
       question:
-        "Bagaimana refaktorisasi tersebut dapat meningkatkan kualitas arsitektur sistem frontend?",
+        "Bagaimana refaktorisasi tersebut dapat meningkatkan kualitas Arsitektur Client-Side pada sistem?",
       focus: "Kualitas Arsitektur",
     },
     {

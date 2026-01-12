@@ -6,13 +6,13 @@ export default function Slide07_Scope() {
   const scopes = [
     {
       icon: <Monitor className="text-blue-400" size={32} />,
-      title: "Fokus Frontend",
-      desc: "Penelitian difokuskan sepenuhnya pada refaktorisasi sisi antarmuka (frontend) website TVKU.",
+      title: "Presentation Layer",
+      desc: "Penelitian difokuskan pada penguatan Lapisan Presentasi dan Interaktivitas Pengguna dalam arsitektur sistem.",
     },
     {
       icon: <Server className="text-zinc-600" size={32} />,
-      title: "Backend Excluded",
-      desc: "Tidak membahas pengembangan, perubahan, atau optimasi pada sisi server (backend).",
+      title: "Decoupled Backend",
+      desc: "Menggunakan pendekatan Decoupled Architecture, memanfaatkan API/Backend yang sudah tersedia.",
       isNegative: true,
     },
     {

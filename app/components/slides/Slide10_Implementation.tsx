@@ -20,7 +20,7 @@ export default function Slide10_Implementation() {
     { id: 3, name: "Redesain Arsitektur", icon: <PenTool size={16} /> },
     { id: 4, name: "Komponenisasi", icon: <Layout size={16} /> },
     { id: 5, name: "Implementasi & Refactor", icon: <Play size={16} /> },
-    { id: 6, name: "Pengujian (Lighthouse)", icon: <BarChart size={16} /> },
+    { id: 6, name: "Pengujian (Web Vitals)", icon: <BarChart size={16} /> },
     { id: 7, name: "Perbaikan Iteratif", icon: <RefreshCcw size={16} /> },
     { id: 8, name: "Deploy Final", icon: <Rocket size={16} />, isFinal: true },
   ];

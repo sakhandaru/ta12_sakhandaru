@@ -37,9 +37,9 @@ export default function Slide06_Benefits() {
             Memberikan kontribusi keilmuan di bidang sistem informasi, khususnya
             terkait penerapan{" "}
             <span className="text-white font-semibold">
-              refaktorisasi frontend
+              Modernisasi Arsitektur Web
             </span>{" "}
-            untuk meningkatkan kualitas arsitektur sistem web.
+            untuk meningkatkan kualitas arsitektur sistem.
           </p>
 
           {/* Decor */}

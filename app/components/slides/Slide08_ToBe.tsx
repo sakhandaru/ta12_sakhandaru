@@ -40,8 +40,8 @@ export default function Slide08_ToBe() {
                   Struktur Komponen Modular
                 </h4>
                 <p className="text-sm text-zinc-500">
-                  Antarmuka disusun dari unit-unit kecil yang independen dan
-                  dapat digunakan kembali.
+                  Sistem aplikasi disusun dari unit-unit kecil yang independen
+                  dan dapat digunakan kembali.
                 </p>
               </div>
             </div>
