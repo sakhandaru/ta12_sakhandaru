@@ -70,8 +70,7 @@ export default function Slide10_Implementation() {
 
         {/* Right: Compact Flow Diagram using 2 Columns */}
         <div className="md:col-span-8 bg-zinc-900/50 border border-zinc-800 rounded-3xl p-6 relative flex flex-col items-center justify-center">
-          <div className="absolute inset-0 bg-grid-zinc-800/30 mask-[linear-gradient(to_bottom,transparent,black)] pointer-events-none"></div>
-          <div className="absolute top-1/2 left-8 md:left-12 bottom-8 w-0.5 bg-zinc-800 mask-[linear-gradient(to_bottom,transparent,black)]"></div>
+          <div className="absolute inset-0 bg-grid-zinc-800/30 [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
 
           <h4 className="relative z-10 text-[10px] font-mono uppercase text-zinc-500 tracking-widest mb-4">
             Implementation Workflow

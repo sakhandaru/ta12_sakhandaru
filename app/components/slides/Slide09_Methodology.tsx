@@ -35,17 +35,17 @@ export default function Slide09_Methodology() {
   ];
 
   return (
-    <div className="w-full h-full bg-zinc-950 text-white p-6 md:p-12 flex flex-col">
+    <div className="w-full h-full bg-zinc-950 text-white p-12 flex flex-col">
       {/* Header */}
-      <div className="flex items-end justify-between mb-6 md:mb-8 border-b border-zinc-800 pb-4 md:pb-6">
-        <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tight">
+      <div className="flex items-end justify-between mb-8 border-b border-zinc-800 pb-6">
+        <h2 className="text-5xl font-bold uppercase tracking-tight">
           Metode Penelitian
         </h2>
-        <div className="text-4xl md:text-6xl font-black text-zinc-800">09.</div>
+        <div className="text-6xl font-black text-zinc-800">09.</div>
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 overflow-y-auto md:overflow-hidden pb-4 md:pb-0">
+      <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-12">
         {/* Left: Text Description */}
         <div className="md:col-span-5 flex flex-col justify-center">
           <div className="mb-8">

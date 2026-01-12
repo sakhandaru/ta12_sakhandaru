@@ -5,12 +5,13 @@ import Image from "next/image";
 
 export default function Slide01_Cover() {
   return (
-    <div className="w-full h-full bg-zinc-950 text-white p-6 md:p-12 flex flex-col justify-between">
+    <div className="w-full h-full bg-zinc-950 text-white p-12 flex flex-col justify-between">
       {/* Top Bar */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-zinc-800 pb-6 gap-4 md:gap-0">
-        <div className="flex items-center gap-4 md:gap-6">
+      <div className="flex justify-between items-start border-b border-zinc-800 pb-6">
+        <div className="flex items-center gap-6">
           <div className="flex items-center gap-4">
-            <div className="relative w-10 h-10 md:w-12 md:h-12 grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100">
+            {/* Logo Placeholder - Adjust size as needed */}
+            <div className="relative w-12 h-12 grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100">
               <Image
                 src="/udinus.png"
                 alt="Logo Udinus"
@@ -18,7 +19,7 @@ export default function Slide01_Cover() {
                 className="object-contain"
               />
             </div>
-            <div className="relative w-14 h-7 md:w-16 md:h-8 grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100">
+            <div className="relative w-16 h-8 grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100">
               <Image
                 src="/tvku.png"
                 alt="Logo TVKU"
@@ -27,12 +28,12 @@ export default function Slide01_Cover() {
               />
             </div>
           </div>
-          <div className="h-8 w-px bg-zinc-800 hidden md:block"></div>
-          <span className="text-xs md:text-sm font-mono tracking-widest uppercase text-zinc-500">
-            Sidang Pendadaran
+          <div className="h-8 w-[1px] bg-zinc-800"></div>
+          <span className="text-sm font-mono tracking-widest uppercase text-zinc-500">
+            Sidang Akhir Skripsi
           </span>
         </div>
-        <div className="text-right flex gap-4 md:block">
+        <div className="text-right">
           <p className="text-xs text-zinc-500 font-mono">SEMESTER GENAP</p>
           <p className="text-xs text-zinc-500 font-mono">2026</p>
         </div>

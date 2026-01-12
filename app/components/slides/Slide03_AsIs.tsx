@@ -96,7 +96,7 @@ export default function Slide03_AsIs() {
 
         {/* Visual Area (Right) - "Random Boxes" Illustration */}
         <div className="md:col-span-6 bg-zinc-900/50 rounded-3xl border border-zinc-800 overflow-hidden relative flex items-center justify-center">
-          <div className="absolute inset-0 bg-zinc-900/80 mask-[linear-gradient(to_bottom,transparent,black)] pointer-events-none z-10"></div>
+          <div className="absolute inset-0 bg-grid-zinc-800/50 [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
 
           {/* The "Messy" Structure Visualization */}
           <div className="relative w-full h-full p-8">
