@@ -32,13 +32,14 @@ export default function Slide02_Background() {
               </h3>
             </div>
             <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed mb-6">
-              Website TVKU berfungsi sebagai media informasi utama untuk berita,
-              program siaran, dan konten institusional.
+              Website TVKU berfungsi sebagai platform digital sentral yang
+              mengintegrasikan layanan streaming siaran, portal berita
+              real-time, dan repositori konten institusional.
             </p>
             <p className="text-zinc-800 dark:text-zinc-300 text-lg leading-relaxed font-medium">
-              Sebagai sistem informasi vital, website ini dituntut memiliki
-              kinerja tinggi, struktur terkelola, dan mendukung pengembangan
-              jangka panjang.
+              Sebagai sistem berskala enterprise, platform ini menuntut sistem
+              yang handal, mudah dikembangkan, dan terstruktur rapi untuk
+              mendukung keberlanjutan layanan.
             </p>
           </motion.div>
 
@@ -78,11 +79,12 @@ export default function Slide02_Background() {
             </div>
             <div>
               <h4 className="text-lg font-bold text-zinc-900 dark:text-zinc-200 mb-1">
-                Struktur Non-Modular
+                Ketergantungan Komponen Tinggi
               </h4>
               <p className="text-sm text-zinc-500">
-                Antarmuka belum tersusun secara modular, menyulitkan penggunaan
-                ulang komponen.
+                Arsitektur sistem yang menyatu (monolitik) membuat komponen
+                saling terikat kuat. Hal ini menyebabkan kode sulit digunakan
+                ulang dan perubahan satu fitur dapat berdampak pada fitur lain.
               </p>
             </div>
           </motion.div>
@@ -101,8 +103,9 @@ export default function Slide02_Background() {
                 Kinerja Belum Optimal
               </h4>
               <p className="text-sm text-zinc-500">
-                Waktu muat halaman lambat dan interaksi pengguna kurang
-                responsif.
+                Waktu tunggu (loading) yang cukup lama dan respons halaman yang
+                kurang cepat, yang dapat mengurangi kenyamanan pengguna saat
+                mengakses informasi.
               </p>
             </div>
           </motion.div>
@@ -121,8 +124,9 @@ export default function Slide02_Background() {
                 Pemeliharaan Tidak Efisien
               </h4>
               <p className="text-sm text-zinc-500">
-                Proses pengembangan fitur baru memakan waktu lama akibat kode
-                yang kompleks.
+                Kompleksitas kode yang tinggi menyulitkan proses perbaikan
+                masalah (debugging) dan memperlambat peluncuran fitur-fitur
+                baru.
               </p>
             </div>
           </motion.div>

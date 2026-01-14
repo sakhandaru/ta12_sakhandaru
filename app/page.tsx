@@ -5,8 +5,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Sun, Moon } from "lucide-react";
 import Slide01_Cover from "./components/slides/Slide01_Cover";
 import Slide02_Background from "./components/slides/Slide02_Background";
+import Slide02a_Evidence from "./components/slides/Slide02a_Evidence";
+import Slide02b_ComplexityEvidence from "./components/slides/Slide02b_ComplexityEvidence";
+import Slide02c_MaintenanceEvidence from "./components/slides/Slide02c_MaintenanceEvidence";
 import Slide03_AsIs from "./components/slides/Slide03_AsIs";
 import Slide04_Problem from "./components/slides/Slide04_Problem";
+import Slide04b_Theory from "./components/slides/Slide04b_Theory";
 import Slide05_Objectives from "./components/slides/Slide05_Objectives";
 import Slide06_Benefits from "./components/slides/Slide06_Benefits";
 import Slide07_Scope from "./components/slides/Slide07_Scope";
@@ -18,8 +22,12 @@ import Slide11_Backcover from "./components/slides/Slide11_Backcover";
 const SLIDES = [
   { component: Slide01_Cover, title: "COVER" },
   { component: Slide02_Background, title: "BACKGROUND" },
+  { component: Slide02a_Evidence, title: "EVIDENCE (STRUCTURE)" },
+  { component: Slide02b_ComplexityEvidence, title: "EVIDENCE (COMPLEXITY)" },
+  // { component: Slide02c_MaintenanceEvidence, title: "EVIDENCE (MAINTENANCE)" },
   { component: Slide03_AsIs, title: "AS-IS" },
   { component: Slide04_Problem, title: "PROBLEM" },
+  { component: Slide04b_Theory, title: "THEORY" },
   { component: Slide05_Objectives, title: "OBJECTIVES" },
   { component: Slide06_Benefits, title: "BENEFITS" },
   { component: Slide07_Scope, title: "SCOPE" },
