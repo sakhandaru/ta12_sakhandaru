@@ -79,7 +79,7 @@ export default function Slide02_Background() {
             </div>
             <div>
               <h4 className="text-lg font-bold text-zinc-900 dark:text-zinc-200 mb-1">
-                Ketergantungan Komponen Tinggi
+                Arsitektur Non-Modular
               </h4>
               <p className="text-sm text-zinc-500">
                 Arsitektur sistem yang menyatu (monolitik) membuat komponen

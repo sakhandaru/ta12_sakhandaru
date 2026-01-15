@@ -86,7 +86,7 @@ export default function Slide02b_ComplexityEvidence() {
         {/* Right Column: Evidence Image */}
         <div className="lg:col-span-7 flex items-center justify-center relative">
           <div className="relative w-full h-full max-h-[500px] bg-zinc-100 dark:bg-zinc-900 rounded-3xl border border-zinc-200 dark:border-zinc-800 overflow-hidden shadow-2xl group">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent z-10 pointer-events-none"></div>
             {/* Using standard img tag as directed for simplicity in this context, or next/image if preferred. Assuming standard img for local asset without next/image setup overhead here, but can switch if needed. */}
             <img
               src="/buktiperforma.png"

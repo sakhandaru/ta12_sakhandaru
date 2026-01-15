@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Sun, Moon } from "lucide-react";
+import { ChevronLeft, ChevronRight, Sun, Moon, Printer } from "lucide-react";
 import Slide01_Cover from "./components/slides/Slide01_Cover";
+import PresentationTimer from "./components/PresentationTimer";
 import Slide02_Background from "./components/slides/Slide02_Background";
 import Slide02a_Evidence from "./components/slides/Slide02a_Evidence";
 import Slide02b_ComplexityEvidence from "./components/slides/Slide02b_ComplexityEvidence";
@@ -25,7 +27,7 @@ const SLIDES = [
   { component: Slide02a_Evidence, title: "EVIDENCE (STRUCTURE)" },
   { component: Slide02b_ComplexityEvidence, title: "EVIDENCE (COMPLEXITY)" },
   // { component: Slide02c_MaintenanceEvidence, title: "EVIDENCE (MAINTENANCE)" },
-  { component: Slide03_AsIs, title: "AS-IS" },
+  // { component: Slide03_AsIs, title: "AS-IS" },
   { component: Slide04_Problem, title: "PROBLEM" },
   { component: Slide04b_Theory, title: "THEORY" },
   { component: Slide05_Objectives, title: "OBJECTIVES" },
@@ -37,7 +39,10 @@ const SLIDES = [
   { component: Slide11_Backcover, title: "BACKCOVER" },
 ];
 
-export default function SlideDeck() {
+function SlideDeckContent() {
+  const searchParams = useSearchParams();
+  const isPrintMode = searchParams.get("print") === "true";
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showGrid, setShowGrid] = useState(false);
   const [theme, setTheme] = useState<"dark" | "light">("dark");
@@ -74,10 +79,77 @@ export default function SlideDeck() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [nextSlide, prevSlide, showGrid, toggleTheme]); // Added toggleTheme to dependencies
+  }, [nextSlide, prevSlide, showGrid, toggleTheme]);
 
   const CurrentSlideComponent = SLIDES[currentSlide].component;
 
+  // --- PRINT MODE ---
+  if (isPrintMode) {
+    return (
+      <div className="light bg-white text-black min-h-screen">
+        {/* Print Helper Bar */}
+        <div className="bg-amber-100 border-b border-amber-200 p-4 text-center print:hidden sticky top-0 z-50">
+          <p className="text-amber-800 font-bold flex items-center justify-center gap-2">
+            <Printer size={20} />
+            Print Mode Enabled
+          </p>
+          <p className="text-amber-700 text-sm mt-1">
+            Press{" "}
+            <span className="font-mono bg-amber-200 px-1 rounded">
+              Cmd/Ctrl + P
+            </span>{" "}
+            to save as PDF. Ensure "Background Graphics" is enabled in print
+            settings.
+          </p>
+        </div>
+
+        {/* Sequential Slides */}
+        <div className="flex flex-col">
+          {SLIDES.map((Slide, index) => (
+            <div
+              key={index}
+              className="w-screen h-screen overflow-hidden break-after-page relative print-slide border-b-2 border-dashed border-zinc-200 print:border-none"
+            >
+              {/* Force light mode for print */}
+              <div className="light w-full h-full">
+                <Slide.component />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Global Print Styles Injection */}
+        <style jsx global>{`
+          @media print {
+            @page {
+              size: landscape;
+              margin: 0;
+            }
+            body {
+              -webkit-print-color-adjust: exact;
+              print-color-adjust: exact;
+            }
+            .break-after-page {
+              break-after: page;
+              page-break-after: always;
+            }
+            .print\\:hidden {
+              display: none !important;
+            }
+            .print\\:border-none {
+              border: none !important;
+            }
+            /* Hide scrollbars in print */
+            ::-webkit-scrollbar {
+              display: none;
+            }
+          }
+        `}</style>
+      </div>
+    );
+  }
+
+  // --- INTERACTIVE MODE ---
   return (
     <div className={theme}>
       <main className="relative w-screen h-screen bg-zinc-50 dark:bg-zinc-950 overflow-hidden text-zinc-900 dark:text-white transition-colors duration-300">
@@ -199,6 +271,23 @@ export default function SlideDeck() {
           />
         </div>
       </main>
+
+      {/* Timer Widget */}
+      <PresentationTimer />
     </div>
+  );
+}
+
+export default function SlideDeck() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center h-screen bg-zinc-950 text-white">
+          Loading...
+        </div>
+      }
+    >
+      <SlideDeckContent />
+    </Suspense>
   );
 }

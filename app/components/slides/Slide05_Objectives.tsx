@@ -77,9 +77,7 @@ export default function Slide05_Objectives() {
                 {/* Bottom Indication */}
                 <div className="mt-auto pt-8 flex items-center gap-2 text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
                   <CheckCircle2 size={16} />
-                  <span className="text-xs uppercase tracking-widest font-semibold">
-                    Tercapai
-                  </span>
+
                 </div>
               </div>
             </motion.div>

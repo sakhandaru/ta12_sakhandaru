@@ -13,7 +13,7 @@ export default function Slide02a_Evidence() {
             <span>Architectural Analysis</span>
           </div>
           <h2 className="text-5xl font-bold uppercase tracking-tight">
-            Analisis Struktur
+            Arsitektur Non-Modular & Pemeliharaan Tidak Efisien
           </h2>
         </div>
         <div className="text-6xl font-black text-zinc-200 dark:text-zinc-800">

@@ -86,8 +86,8 @@ export default function Slide08_ToBe() {
           {/* The Visual Animation */}
           <div className="flex-1 flex items-center justify-center gap-12 relative z-10">
             {/* As-Is: Chaos */}
-            <div className="w-48 h-48 relative opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-              <div className="absolute inset-0 border-2 border-dashed border-red-500/30 rounded-2xl"></div>
+            <div className="w-48 h-48 relative transition-all duration-500">
+              <div className="absolute inset-0 border-2 border-dashed border-red-500/30 rounded-2xl bg-red-500/5"></div>
               {/* Random Scattered Boxes */}
               <motion.div
                 initial={{ rotate: 0 }}
@@ -97,7 +97,7 @@ export default function Slide08_ToBe() {
                   repeat: Infinity,
                   repeatType: "reverse",
                 }}
-                className="absolute top-4 left-4 w-16 h-12 bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700"
+                className="absolute top-4 left-4 w-16 h-12 bg-zinc-100 dark:bg-zinc-800 border border-red-500/50"
               ></motion.div>
               <motion.div
                 initial={{ rotate: 0 }}
@@ -107,7 +107,7 @@ export default function Slide08_ToBe() {
                   repeat: Infinity,
                   repeatType: "reverse",
                 }}
-                className="absolute bottom-6 right-8 w-12 h-16 bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700"
+                className="absolute bottom-6 right-8 w-12 h-16 bg-zinc-100 dark:bg-zinc-800 border border-red-500/50"
               ></motion.div>
               <motion.div
                 initial={{ rotate: 0 }}
@@ -117,7 +117,7 @@ export default function Slide08_ToBe() {
                   repeat: Infinity,
                   repeatType: "reverse",
                 }}
-                className="absolute top-12 right-4 w-14 h-14 bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700"
+                className="absolute top-12 right-4 w-14 h-14 bg-zinc-100 dark:bg-zinc-800 border border-red-500/50"
               ></motion.div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-red-500 font-bold bg-zinc-50 dark:bg-zinc-950 px-2">

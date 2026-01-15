@@ -35,7 +35,7 @@ export default function Slide04_Problem() {
           Rumusan Masalah
         </h2>
         <div className="text-6xl font-black text-zinc-200 dark:text-zinc-800">
-          04.
+          03.
         </div>
       </div>
 

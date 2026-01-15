@@ -48,7 +48,7 @@ export default function Slide11_Backcover() {
           className="max-w-2xl"
         >
           <p className="text-2xl text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            "Atas perhatian Ibu Novita Kurnia Ningrum, M. Kom selaku Penguji,
+            "Atas perhatian Ibu Novita Kurnia Ningrum, M. Kom selaku Penguji, dan Ibu Gustina Alfa Trisna Pradika, M.Kom selaku Pembimbing,
             saya ucapkan terima kasih."
           </p>
         </motion.div>

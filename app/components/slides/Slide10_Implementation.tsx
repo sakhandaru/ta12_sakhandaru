@@ -15,14 +15,23 @@ import {
 
 export default function Slide10_Implementation() {
   const steps = [
-    { id: 1, name: "Identifikasi Masalah", icon: <Layers size={16} /> },
-    { id: 2, name: "Analisis Struktur", icon: <Database size={16} /> },
-    { id: 3, name: "Redesain Arsitektur", icon: <PenTool size={16} /> },
-    { id: 4, name: "Komponenisasi", icon: <Layout size={16} /> },
-    { id: 5, name: "Implementasi & Refactor", icon: <Play size={16} /> },
-    { id: 6, name: "Pengujian (Web Vitals)", icon: <BarChart size={16} /> },
-    { id: 7, name: "Perbaikan Iteratif", icon: <RefreshCcw size={16} /> },
-    { id: 8, name: "Deploy Final", icon: <Rocket size={16} />, isFinal: true },
+    { id: 1, name: "Identifikasi modul prioritas", icon: <Layers size={16} /> },
+    {
+      id: 2,
+      name: "Penyusunan struktur komponen modular",
+      icon: <Layout size={16} />,
+    },
+    {
+      id: 3,
+      name: "Penerapan refaktorisasi bertahap",
+      icon: <RefreshCcw size={16} />,
+    },
+    {
+      id: 4,
+      name: "Evaluasi sistem",
+      icon: <BarChart size={16} />,
+      isFinal: true,
+    },
   ];
 
   return (
@@ -80,104 +89,57 @@ export default function Slide10_Implementation() {
             Implementation Workflow
           </h4>
 
-          <div className="relative z-10 grid grid-cols-2 gap-x-8 gap-y-4 w-full h-full content-center">
-            {/* Column 1: Steps 1-4 */}
-            <div className="flex flex-col gap-3 justify-center">
-              {steps.slice(0, 4).map((step, idx) => (
-                <div
-                  key={step.id}
-                  className="relative flex flex-col items-center"
+          <div className="relative z-10 w-full h-full flex flex-col justify-center items-center gap-0">
+            {steps.map((step, idx) => (
+              <div
+                key={step.id}
+                className="relative w-full max-w-lg pb-4 last:pb-0"
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * idx }}
+                  className={`flex items-center gap-4 p-4 rounded-xl border w-full relative z-10 transition-all ${
+                    step.isFinal
+                      ? "bg-blue-50 dark:bg-blue-900/10 border-blue-200 dark:border-blue-800"
+                      : "bg-white dark:bg-zinc-800/80 border-zinc-200 dark:border-zinc-700 shadow-sm"
+                  }`}
                 >
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.2 + idx * 0.1 }}
-                    className="flex items-center gap-3 py-2 px-3 rounded-lg border bg-white dark:bg-zinc-800/80 border-zinc-200 dark:border-zinc-700 w-full"
-                  >
-                    <div className="flex items-center justify-center w-6 h-6 bg-zinc-100 dark:bg-zinc-950 rounded text-xs font-mono text-zinc-500 border border-zinc-300 dark:border-zinc-800 shrink-0">
-                      {step.id}
-                    </div>
-                    <div className="p-1.5 bg-zinc-100 dark:bg-zinc-700 rounded text-zinc-500 dark:text-zinc-400 shrink-0">
-                      {step.icon}
-                    </div>
-                    <span className="text-sm text-zinc-600 dark:text-zinc-300 font-medium truncate">
-                      {step.name}
-                    </span>
-                  </motion.div>
-                  {/* Down Arrow for internal column flow */}
-                  {idx < 3 && (
-                    <ChevronDown
-                      size={14}
-                      className="text-zinc-400 dark:text-zinc-600 my-0.5"
-                    />
-                  )}
-                </div>
-              ))}
-            </div>
-
-            {/* Transition Arrow between Columns */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block">
-              <ArrowRight
-                size={24}
-                className="text-zinc-400 dark:text-zinc-600 opacity-50"
-              />
-            </div>
-
-            {/* Column 2: Steps 5-8 */}
-            <div className="flex flex-col gap-3 justify-center">
-              {steps.slice(4, 8).map((step, idx) => (
-                <div
-                  key={step.id}
-                  className="relative flex flex-col items-center"
-                >
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.6 + idx * 0.1 }}
-                    className={`flex items-center gap-3 py-2 px-3 rounded-lg border w-full ${
+                  <div
+                    className={`flex items-center justify-center w-8 h-8 rounded-lg text-sm font-bold border shrink-0 ${
                       step.isFinal
-                        ? "bg-blue-900/20 border-blue-500/50"
-                        : "bg-white dark:bg-zinc-800/80 border-zinc-200 dark:border-zinc-700"
+                        ? "bg-blue-500 text-white border-blue-600"
+                        : "bg-zinc-100 dark:bg-zinc-950 text-zinc-500 border-zinc-200 dark:border-zinc-800"
                     }`}
                   >
-                    <div
-                      className={`flex items-center justify-center w-6 h-6 rounded text-xs font-mono border shrink-0 ${
-                        step.isFinal
-                          ? "bg-blue-800 text-blue-100 border-blue-500/50"
-                          : "bg-zinc-100 dark:bg-zinc-950 text-zinc-500 border-zinc-300 dark:border-zinc-800"
-                      }`}
-                    >
-                      {step.id}
-                    </div>
-                    <div
-                      className={`p-1.5 rounded shrink-0 ${
-                        step.isFinal
-                          ? "bg-blue-500 text-white"
-                          : "bg-zinc-100 dark:bg-zinc-700 text-zinc-500 dark:text-zinc-400"
-                      }`}
-                    >
-                      {step.icon}
-                    </div>
-                    <span
-                      className={`text-sm font-medium truncate ${
-                        step.isFinal
-                          ? "text-blue-200"
-                          : "text-zinc-600 dark:text-zinc-300"
-                      }`}
-                    >
-                      {step.name}
-                    </span>
-                  </motion.div>
-                  {/* Down Arrow for internal column flow */}
-                  {idx < 3 && (
-                    <ChevronDown
-                      size={14}
-                      className="text-zinc-400 dark:text-zinc-600 my-0.5"
-                    />
-                  )}
-                </div>
-              ))}
-            </div>
+                    {step.id}
+                  </div>
+                  <div
+                    className={`p-2 rounded-lg shrink-0 ${
+                      step.isFinal
+                        ? "bg-blue-200 dark:bg-blue-800 text-blue-700 dark:text-blue-100"
+                        : "bg-zinc-100 dark:bg-zinc-700 text-zinc-500 dark:text-zinc-400"
+                    }`}
+                  >
+                    {step.icon}
+                  </div>
+                  <span
+                    className={`text-lg font-semibold ${
+                      step.isFinal
+                        ? "text-blue-700 dark:text-blue-300"
+                        : "text-zinc-700 dark:text-zinc-200"
+                    }`}
+                  >
+                    {step.name}
+                  </span>
+                </motion.div>
+
+                {/* Connector Line */}
+                {idx < steps.length - 1 && (
+                  <div className="absolute left-8 top-1/2 h-full w-0.5 bg-zinc-200 dark:bg-zinc-700 -ml-[1px] z-0" />
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
